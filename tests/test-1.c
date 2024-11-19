@@ -2,7 +2,7 @@
 #include <string.h>
 
 // Function declarations
-void printArray(int arr[], int size);
+void printArray(unsigned char arr[], int size);
 void checkString(char str[]);
 
 // Main function
@@ -10,7 +10,7 @@ int main() {
     printf("Starting the test program...\n");
 
     // Array declaration and initialization
-    int numbers[] = {10, 20, 30, 40, 50};
+    unsigned char numbers[] = {0x93, 0x81, 0x84, 'Louis Armstrong', 31, 56};
     int arraySize = sizeof(numbers) / sizeof(numbers[0]);
     printArray(numbers, arraySize);
 
@@ -58,7 +58,7 @@ int main() {
 }
 
 // Function to print an array
-void printArray(int arr[], int size) {
+void printArray(unsigned char arr[], int size) {
     printf("Printing array elements:\n");
     for (int i = 0; i < size; i++) {
         printf("arr[%d] = %d\n", i, arr[i]);
