@@ -16,6 +16,13 @@ mkdir -p "$output_dir/$param"
 
 # Step 2: Use Python to run a command with the parameter
 python3 obfuscator.py "$tests_dir/${param}.c" "$output_dir/$param/${param}_obfuscated.c"
+# Check if the command failed
+if [ $? -ne 0 ]; then
+    echo "Error: The obfuscation command failed for ${param}."
+    # You can also exit the script if you want
+    exit 1
+fi
+
 
 # Step 3: Compile the C programs from the specified directory
 # Original code
