@@ -22,8 +22,6 @@ if [ $? -ne 0 ]; then
     # You can also exit the script if you want
     exit 1
 fi
-# Set obfuscated file to read-only
-chmod 444 ""$output_dir/$param/${param}_obfuscated.c""
 
 
 # Step 3: Compile the C programs from the specified directory
