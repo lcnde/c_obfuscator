@@ -10,7 +10,7 @@ int main() {
     printf("Starting the test program...\n");
 
     // Array declaration and initialization
-    unsigned char numbers[] = {0x93, 0x81, 0x84, 'Louis Armstrong', 31, 56};
+    unsigned char numbers[] = {0x93, 0x81, 0x84, 'L', 'u', 31, 56, 'a'};
     int arraySize = sizeof(numbers) / sizeof(numbers[0]);
     printArray(numbers, arraySize);
 
